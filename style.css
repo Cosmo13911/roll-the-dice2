@@ -43,6 +43,12 @@ html, body {
     background: rgb(255, 166, 0);
 }
 
+.left-container .d8 {
+    background: #323cf8;
+}
+.left-container .d8:hover {
+    background: #569cff;
+}
 .right-container {
     margin: 10px 10px 0 0px;
     display: flex;
