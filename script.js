@@ -72,11 +72,11 @@ function rollDice(n) {
         }
     }
     const calculate = (totalPoints) => {
-        food.innerText = Math.floor(totalPoints / 3)
-        wood.innerText = Math.floor(totalPoints / 4)
-        clay.innerText = Math.floor(totalPoints / 5)
-        stone.innerText = Math.floor(totalPoints / 6)
-        gold.innerText = Math.floor(totalPoints / 7)
+        food.innerText = Math.floor(totalPoints / 2)
+        wood.innerText = Math.floor(totalPoints / 3)
+        clay.innerText = Math.floor(totalPoints / 4)
+        stone.innerText = Math.floor(totalPoints / 5)
+        gold.innerText = Math.floor(totalPoints / 6)
     }
     calculate(totalPoints);
     total.innerText = totalPoints
