@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-image: url(https://www.yucata.de/netimages/games/StoneAge/spielplan.jpg);
+    color: white;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    gap: 5px;
+}
+
+.left-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex: 1;
+    height: 100%;
+    margin: 10px;
+    backdrop-filter: blur(2px);
+    background: #0000004e;
+}
+
+.left-container .dice {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border: 2px solid #fffbfb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: none;
+    cursor: pointer;
+}
+
+.left-container .dice:hover {
+    background: rgb(255, 166, 0);
+}
+
+.right-container {
+    margin: 10px 10px 0 0px;
+    display: flex;
+    height: 100%;
+    flex: 9;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.supply-container {
+    backdrop-filter: blur(2px);
+    background: #0000004e;
+    flex: 5;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #ffffff;
+}
+
+.supply-container div {
+    flex: 1;
+}
+.supply-container div img {
+    aspect-ratio: 1/1;
+    width: 90%;
+}
+
+.supply-container div p {
+    font-size: 2.5vw;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.dice-point-container {
+    flex: 3;
+    display: flex;
+    backdrop-filter: blur(2px);
+    background: #0000004e;
+}
+
+
+.dice-point-container div {
+    border: 2px solid #000000;
+    flex: 1;
+    display: flex;
+    font-size: 3vw;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: black;
+}
+
+.dice-point-container .dice-point-total {
+    color: white;
+    background: rgb(31, 118, 0);
+}
+.score-container {
+    flex: 4;
+    border: 1px solid #ffffff;
+    display: flex;
+    backdrop-filter: blur(2px);
+    background: #0000004e;
+}
+
+.score-container div {
+    border: 1px solid #ffffff;
+    flex: 1;
+    flex-direction: column;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+}
+
+.score-container div .text {
+    margin: 20px 0 10px 0;
+}
+
+.score-container div .score {
+    margin: 0 0 10px 0;
+}
+
+.score-container div input {
+    /* background: none; */
+    border: 1px solid #ffffff;
+    margin: 0px px;
+    height: 20%;
+    width: 30%;
+    text-align: center;
+    font-size: 1vw;
+    color: rgb(0, 0, 0);
+}
+

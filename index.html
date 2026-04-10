@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll The Dice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div class="dice d1">1</div>
+            <div class="dice d2">2</div>
+            <div class="dice d3">3</div>
+            <div class="dice d4">4</div>
+            <div class="dice d5">5</div>
+            <div class="dice d6">6</div>
+            <div class="dice d7">7</div>
+        </div>
+
+        <div class="right-container">
+            <div class="supply-container">    
+                <div class="food">
+                    <img src="picture/food.png" alt="food">
+                    <p class="food-text">0</p>
+                </div>
+                <div class="wood">
+                    <img src="picture/wood.png" alt="wood.png">
+                    <p class="wood-text">0</p>
+                </div>
+                <div class="clay">
+                    <img src="picture/clay.png" alt="clay.png">
+                    <p class="clay-text">0</p>
+                </div>
+                <div class="stone">
+                    <img src="picture/stone.png" alt="stone.png">
+                    <p class="stone-text">0</p>
+                </div>
+                <div class="gold">
+                    <img src="picture/gold.png" alt="gold.png">
+                    <p class="gold-text">0</p>
+                </div>
+            </div>
+
+            <div class="score-container">
+                <div class="player1">
+                    <p class="text">Player 1</p>
+                    <p class="score1">0</p>
+                    <input type="text" class="score-player1" placeholder="score" >
+                </div>
+                
+                <div class="player2">
+                    <p class="text">Player 2</p>
+                    <p class="score2">0</p>
+                    <input type="text" class="score-player2" placeholder="score">
+                </div>
+            </div>
+            <div class="dice-point-container">
+                <div class="dice-point-total"></div>
+                <div class="dice-point"></div>
+                <div class="dice-point"></div>
+                <div class="dice-point"></div>
+                <div class="dice-point"></div>
+                <div class="dice-point"></div>
+                <div class="dice-point"></div>
+                <div class="dice-point"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
