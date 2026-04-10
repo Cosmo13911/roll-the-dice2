@@ -72,6 +72,7 @@ function rollDice(n) {
         }
     }
     const calculate = (totalPoints) => {
+        // fix divider
         food.innerText = Math.floor(totalPoints / 2)
         wood.innerText = Math.floor(totalPoints / 3)
         clay.innerText = Math.floor(totalPoints / 4)
