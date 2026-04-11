@@ -22,10 +22,11 @@ html, body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     flex: 1;
-    height: 100%;
+    height: 90vh;
     margin: 10px;
     backdrop-filter: blur(2px);
     background: #0000004e;
+    flex-shrink: 3;
 }
 
 .left-container .dice {
@@ -35,7 +36,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 4.5vw;
     background: none;
     cursor: pointer;
 }
@@ -126,6 +127,7 @@ html, body {
 
 .score-container div .text {
     margin: 20px 0 10px 0;
+    font-size: 2.5vw;
 }
 
 .score-container div .score {
@@ -196,6 +198,7 @@ html, body {
     margin-top: 20px;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 2.5vw;
 }
 
 .red {
@@ -218,9 +221,19 @@ html, body {
     border: none  ;
     width: 7%;
     background: orange;
-    font-size: 1vw;
+    font-size: 2vh;
 }
 
 .start-btn:hover {
     background: rgb(255, 188, 64);
+}
+
+.time-container {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    background: rgb(255, 81, 0);
+    padding: 0.6vw;
+    display: none;
 }

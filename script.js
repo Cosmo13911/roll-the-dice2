@@ -36,6 +36,9 @@ const gameContainer = document.querySelector('.container')
 
 const player = document.querySelectorAll('.score-container div')
 
+const timeDisplay = document.querySelector('.timer-display')
+const timeCotainer = document.querySelector('.time-container')
+
 let playersData = [
     { name: '', color: '' },
     { name: '', color: '' },
@@ -49,8 +52,11 @@ let scorePlayer2 = 0
 let scorePlayer3 = 0
 let scorePlayer4 = 0
 
+let secondsCount = 0
+
 // formContainer.style.display = 'none'
 // gameContainer.style.display = 'flex'
+// timer()
 
 
 dices.forEach(e => e.addEventListener('click', () => {
@@ -72,6 +78,16 @@ namePlayer.forEach(e => e.addEventListener('keydown', addName))
 
 startBtn.addEventListener('click', start)
 
+function timer() {
+    setInterval( () => {
+        secondsCount++
+        console.log(secondsCount)
+        const m = Math.floor(secondsCount/60)
+        const s = secondsCount % 60
+
+        timeDisplay.innerText = `${m}:${s.toString().padStart(2, '0')}`
+    }, 1000)
+}
 function start() {
     let activePlayer = playersData.filter(player => player.name !== '').length
     console.log(activePlayer)
@@ -95,6 +111,9 @@ function start() {
         }
         formContainer.style.display = 'none'
         gameContainer.style.display = 'flex'
+
+        timeCotainer.style.display = 'flex'
+        timer()
     }
 }
 
