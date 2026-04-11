@@ -49,6 +49,10 @@ let scorePlayer2 = 0
 let scorePlayer3 = 0
 let scorePlayer4 = 0
 
+formContainer.style.display = 'none'
+gameContainer.style.display = 'flex'
+
+
 dices.forEach(e => e.addEventListener('click', () => {
     const index = e.innerText
     if (index === '+1') {
