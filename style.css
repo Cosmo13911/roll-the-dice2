@@ -325,8 +325,13 @@ html, body {
 }
 
 @media screen and (max-width: 800px){
-        .left-container {
+    .left-container {
         height: 67vh;
         margin: 10px;
+    }
+
+    .left-container .dice {
+        aspect-ratio: 0;
+        padding: 10px;
     }
 }
