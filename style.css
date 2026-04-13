@@ -280,6 +280,8 @@ html, body {
 
     .left-container .dice {
         font-size: 3vw;
+        aspect-ratio: 0;
+        padding: 10px;
     }
 
     .noti-container {
