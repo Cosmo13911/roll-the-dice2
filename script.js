@@ -56,10 +56,9 @@ let scorePlayer4 = 0
 
 let secondsCount = 0
 
-formContainer.style.display = 'none'
-gameContainer.style.display = 'flex'
-timer()
-
+// formContainer.style.display = 'none'
+// gameContainer.style.display = 'flex'
+// timer()
 
 dices.forEach(e => e.addEventListener('click', () => {
     const index = e.innerText
@@ -196,10 +195,12 @@ function rollDice(n) {
 
     const noti = document.createElement('p')
     noti.innerText = `Random: ${n} | Points: ${totalPoints}`
+    notiContainer.style.display = 'flex'
     notiContainer.prepend(noti)
-
+    
     setTimeout(() => {
         noti.remove()
+        notiContainer.style.display = 'none'
     }, 3000);
 }
 
