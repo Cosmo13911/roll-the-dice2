@@ -200,7 +200,6 @@ function rollDice(n) {
     
     setTimeout(() => {
         noti.remove()
-        notiContainer.style.display = 'none'
     }, 3000);
 }
 
