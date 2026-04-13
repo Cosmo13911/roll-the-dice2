@@ -7,6 +7,7 @@
 html, body {
     height: 100%;
     background-image: url(https://www.yucata.de/netimages/games/StoneAge/spielplan.jpg);
+    width: 100%;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
@@ -280,8 +281,6 @@ html, body {
 
     .left-container .dice {
         font-size: 3vw;
-        aspect-ratio: 0;
-        padding: 10px;
     }
 
     .noti-container {
@@ -323,17 +322,5 @@ html, body {
         height: 25%;
         width: 35%;
         font-size: 1.3vw;
-    }
-}
-
-@media screen and (max-width: 800px){
-    .left-container {
-        height: 67vh;
-        margin: 10px;
-    }
-
-    .left-container .dice {
-        aspect-ratio: 0;
-        padding: 10px;
     }
 }
