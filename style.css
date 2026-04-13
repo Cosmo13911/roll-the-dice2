@@ -323,3 +323,10 @@ html, body {
         font-size: 1.3vw;
     }
 }
+
+@media screen and (max-width: 800px){
+        .left-container {
+        height: 67vh;
+        margin: 10px;
+    }
+}
