@@ -39,6 +39,8 @@ const player = document.querySelectorAll('.score-container div')
 const timeDisplay = document.querySelector('.timer-display')
 const timeCotainer = document.querySelector('.time-container')
 
+const notiContainer = document.querySelector('.noti-container')
+
 let playersData = [
     { name: '', color: '' },
     { name: '', color: '' },
@@ -54,9 +56,9 @@ let scorePlayer4 = 0
 
 let secondsCount = 0
 
-// formContainer.style.display = 'none'
-// gameContainer.style.display = 'flex'
-// timer()
+formContainer.style.display = 'none'
+gameContainer.style.display = 'flex'
+timer()
 
 
 dices.forEach(e => e.addEventListener('click', () => {
@@ -65,8 +67,8 @@ dices.forEach(e => e.addEventListener('click', () => {
         rollDice('+1')
         return
     }
-    const a = rollDice(Number(index))
-    console.log(`total : ${a}`)
+    rollDice(Number(index))
+    console.log(`Index : ${index}`)
 }))
 
 inputScorePlayer1.addEventListener('keydown', addScore)
@@ -177,21 +179,28 @@ function rollDice(n) {
         for (let i = 0; i < n; i++) {
             const randomNumber = Math.floor(Math.random() * 6) + 1;
             totalPoints += randomNumber
-            console.log(randomNumber)
+            console.log(`Random number: ${randomNumber}`)
             dicePoints[i].innerText = randomNumber;
         }
     }
     const calculate = (totalPoints) => {
-        // fix divider
-        food.innerText = Math.floor(totalPoints / 2)
-        wood.innerText = Math.floor(totalPoints / 3)
-        clay.innerText = Math.floor(totalPoints / 4)
-        stone.innerText = Math.floor(totalPoints / 5)
-        gold.innerText = Math.floor(totalPoints / 6)
+        console.log(`total points: ${totalPoints}`)
+        food.innerHTML = `${Math.floor(totalPoints / 2)}<sup>+${2 - totalPoints % 2}<\sup>`
+        wood.innerHTML = `${Math.floor(totalPoints / 3)}<sup>+${3 - totalPoints % 3}<\sup>`
+        clay.innerHTML = `${Math.floor(totalPoints / 4)}<sup>+${4 - totalPoints % 4}<\sup>`
+        stone.innerHTML = `${Math.floor(totalPoints / 5)}<sup>+${5 - totalPoints % 5}<\sup>`
+        gold.innerHTML = `${Math.floor(totalPoints / 6)}<sup>+${6 - totalPoints % 6}<\sup>`
     }
     calculate(totalPoints);
     total.innerText = totalPoints
 
+    const noti = document.createElement('p')
+    noti.innerText = `Random: ${n} | Points: ${totalPoints}`
+    notiContainer.prepend(noti)
+
+    setTimeout(() => {
+        noti.remove()
+    }, 3000);
 }
 
 

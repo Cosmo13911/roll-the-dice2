@@ -58,6 +58,7 @@ html, body {
     flex: 9;
     flex-direction: column;
     gap: 5px;
+    flex-shrink: 1;
 }
 
 .supply-container {
@@ -81,6 +82,10 @@ html, body {
     font-size: 2.5vw;
     text-align: center;
     padding-bottom: 10%;
+}
+
+.supply-container div p sup {
+    color: rgb(255, 219, 15);
 }
 
 .dice-point-container {
@@ -142,13 +147,6 @@ html, body {
     text-align: center;
     font-size: 1vw;
     color: rgb(0, 0, 0);
-}
-
-.score-container div button {
-    width: 12%;
-    height: 16%;
-    background: white;
-    border: none  ;
 }
 
 .form {
@@ -235,5 +233,93 @@ html, body {
     right: 0;
     background: rgb(255, 81, 0);
     padding: 0.6vw;
-    display: none;
+    display: flex;
+}
+
+.noti-container {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.733);
+    padding: 0.6vw;
+    font-size: 18px;
+}
+
+/* สไตล์หน้าจอแจ้งเตือน */
+#rotate-notice {
+    display: none; /* ปิดไว้เป็นค่าเริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2c1a0b; /* สีน้ำตาลเข้มธีม Stone Age */
+    color: white;
+    z-index: 9999; /* ให้อยู่บนสุดทับทุกอย่าง */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* เมื่อหน้าจอเป็นแนวตั้ง (Portrait) */
+@media screen and (orientation: portrait) {
+    #rotate-notice {
+        display: flex; /* แสดงหน้าแจ้งเตือน */
+    }
+    .container, .form, .time-container {
+        display: none !important; /* ซ่อนหน้าเกมและฟอร์มทั้งหมด */
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .left-container {
+        height: 90vh;
+        margin: 10px;
+    }
+
+    .left-container .dice {
+        font-size: 3vw;
+    }
+
+    .noti-container {
+        font-size: 14px;
+    }
+
+    .supply-container div img {
+        aspect-ratio: 1/1;
+        width: 80%;
+        margin-left: 15px;
+        margin-bottom: -10px;
+    }
+
+    .supply-container {
+        height: 0;
+    }
+
+    .supply-container div p {
+        font-size: 2vw;
+        text-align: center;
+    }
+    .container {
+        display: none;
+        width: 100%;
+        height: 90vh;
+        gap: 0px;
+    }
+    .time-container {
+        padding: 0.5vw;
+        font-size: 14px;
+    }
+
+    .score-container div .text {
+        margin: 10px 0 5px 0;
+        font-size: 2.5vw;
+    }
+
+    .score-container div input {
+        height: 25%;
+        width: 35%;
+        font-size: 1.3vw;
+    }
 }
