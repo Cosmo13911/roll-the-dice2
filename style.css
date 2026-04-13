@@ -234,7 +234,7 @@ html, body {
     right: 0;
     background: rgb(255, 81, 0);
     padding: 0.6vw;
-    display: flex;
+    display: none;
 }
 
 .noti-container {
