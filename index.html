@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roll The Dice</title>
+    <title>Stone Age</title>
+    <link rel="icon" type="image/svg+xml" href="https://cf.geekdo-images.com/elmZegVZ6gp4_5izUgxGQQ__itemrep/img/vApiI-gvXtwafEriPc4jDVJ1ajA=/fit-in/246x300/filters:strip_icc()/pic1632539.jpg"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="form">
         <h1 class="text-form">Player 1 </h1>
         <div class="player">
-            <input type="text" class ="name" id="name-player1" enterkeyhint="done" data-idx="0" placeholder="input player1 name">
+            <input type="text" class="name" id="name-player1" enterkeyhint="done" data-idx="0"
+                placeholder="input player1 name">
             <select class="color-dropdown" id="color-player1" data-idx="0">
                 <option value="" disabled selected>color</option>
                 <option value="red">🔴</option>
@@ -22,10 +27,11 @@
                 <option value="green">🟢</option>
             </select>
         </div>
-        
+
         <h1 class="text-form">Player 2</h1>
         <div class="player">
-            <input type="text" class ="name" id="name-player2" data-idx="1" enterkeyhint="done" placeholder="input player2 name">
+            <input type="text" class="name" id="name-player2" data-idx="1" enterkeyhint="done"
+                placeholder="input player2 name">
             <select class="color-dropdown" data-idx="1" id="color-player2">
                 <option value="" disabled selected>color</option>
                 <option value="red">🔴</option>
@@ -34,10 +40,11 @@
                 <option value="green">🟢</option>
             </select>
         </div>
-        
+
         <h1 class="text-form">Player 3</h1>
         <div class="player">
-            <input type="text" class ="name" id="name-player3" data-idx="2" enterkeyhint="done"  placeholder="input player3 name">
+            <input type="text" class="name" id="name-player3" data-idx="2" enterkeyhint="done"
+                placeholder="input player3 name">
             <select class="color-dropdown" id="color-player3" data-idx="2">
                 <option value="" disabled selected>color</option>
                 <option value="red">🔴</option>
@@ -46,10 +53,11 @@
                 <option value="green">🟢</option>
             </select>
         </div>
-        
+
         <h1 class="text-form">Player 4</h1>
         <div class="player">
-            <input type="text" class ="name" enterkeyhint="done" id="name-player4" data-idx="3" placeholder="input player4 name">
+            <input type="text" class="name" enterkeyhint="done" id="name-player4" data-idx="3"
+                placeholder="input player4 name">
             <select class="color-dropdown" id="color-player4" data-idx="3">
                 <option value="" disabled selected>color</option>
                 <option value="red">🔴</option>
@@ -74,7 +82,7 @@
         </div>
 
         <div class="right-container">
-            <div class="supply-container">    
+            <div class="supply-container">
                 <div class="food">
                     <img src="picture/food.png" alt="food">
                     <p class="food-text">0</p>
@@ -105,9 +113,9 @@
                 <div class="player1 player">
                     <p class="text">Player 1</p>
                     <p class="score1">0</p>
-                    <input type="text" class="score-player1" enterkeyhint="done" placeholder="score" >
+                    <input type="text" class="score-player1" enterkeyhint="done" placeholder="score">
                 </div>
-                
+
                 <div class="player2 player">
                     <p class="text">Player 2</p>
                     <p class="score2">0</p>
@@ -155,4 +163,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
